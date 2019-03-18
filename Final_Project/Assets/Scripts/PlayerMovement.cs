@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         horiztonalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horiztonalMove));
 
-        /////////////Crouching////////////
+        /////////////Jumping////////////
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
