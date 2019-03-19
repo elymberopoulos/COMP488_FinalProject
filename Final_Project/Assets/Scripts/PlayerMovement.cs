@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
 
-    float horiztonalMove = 0f;
+    float horizontonalMove = 0f;
     public float runSpeed = 40f;
     
     bool jump = false;
@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horiztonalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horiztonalMove));
+        horizontonalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontonalMove));
 
         /////////////Jumping////////////
         if (Input.GetButtonDown("Jump"))
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horiztonalMove * Time.fixedDeltaTime, crouch, jump);
+        controller.Move(horizontonalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
 }
