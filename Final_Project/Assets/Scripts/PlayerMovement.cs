@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontonalMove = 0f;
     public float runSpeed = 40f;
+    public float jumpForce = 1200f;
     
     bool jump = false;
     bool crouch = false;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         /////////////Jumping////////////
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 1200f));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
         }
         /////////////Crouching////////////
 
