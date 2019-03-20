@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7933610117211365307}
   - component: {fileID: 7933610117211365316}
-  - component: {fileID: 7933610117211365317}
   - component: {fileID: 7933610117211365318}
+  - component: {fileID: 7933610117211365317}
   m_Layer: 0
-  m_Name: tileset_375 (2)
+  m_Name: Crate2_Physics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7933610117211365319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.27, y: -8.9, z: 0}
-  m_LocalScale: {x: 0.21949126, y: 0.20165728, z: 1}
+  m_LocalPosition: {x: -36.09, y: -11.06, z: 0}
+  m_LocalScale: {x: 0.123578005, y: 0.124341, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300750, guid: 1a2b20d8c68c0a047a66c566847bd9aa, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300704, guid: 1a2b20d8c68c0a047a66c566847bd9aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,6 +81,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &7933610117211365318
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933610117211365319}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 4.02
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &7933610117211365317
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -107,24 +128,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
   m_EdgeRadius: 0
---- !u!50 &7933610117211365318
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7933610117211365319}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 3
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 2
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
