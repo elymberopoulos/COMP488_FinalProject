@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject gunBarrel;
 
     //public AudioClip impact;
     public AudioClip gunShot;
@@ -18,7 +19,7 @@ public class Weapon : MonoBehaviour
         {
 
             Shoot();
-            AudioSource.PlayClipAtPoint(gunShot, new Vector2(0, 0));
+            AudioSource.PlayClipAtPoint(gunShot, new Vector2(gunBarrel.transform.position.x, gunBarrel.transform.position.y));
 
         }
     }
