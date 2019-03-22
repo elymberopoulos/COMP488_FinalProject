@@ -6814,7 +6814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LookaheadTime: 0.3
+  m_LookaheadTime: 0.5
   m_LookaheadSmoothing: 15
   m_LookaheadIgnoreY: 1
   m_XDamping: 0.5
@@ -6824,11 +6824,11 @@ MonoBehaviour:
   m_ScreenY: 0.53
   m_CameraDistance: 40
   m_DeadZoneWidth: 0.09
-  m_DeadZoneHeight: 0.1
+  m_DeadZoneHeight: 0.23
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneHeight: 1
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -12603,9 +12603,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 953ca09a6e0515349864485e92c05e82, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 31d8b41af3c4954488748a6bccb2a0d7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
