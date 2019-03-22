@@ -9,9 +9,11 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontonalMove = 0f;
     public float runSpeed = 40f;
+    public float jumpForce = 1200f;
     
     bool jump = false;
     bool crouch = false;
+    bool grounded = false;
 
     void Update()
     {
@@ -19,9 +21,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontonalMove));
 
         /////////////Jumping////////////
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && grounded)
         {
-            jump = true;
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
         }
         /////////////Crouching////////////
 
@@ -34,6 +36,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Conllison Enter");
+        grounded = true;
+            
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("Collison Exit");
+        grounded = false;
+
+    }
     void FixedUpdate()
     {
         controller.Move(horizontonalMove * Time.fixedDeltaTime, crouch, jump);
