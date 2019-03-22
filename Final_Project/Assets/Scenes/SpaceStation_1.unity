@@ -7549,6 +7549,7 @@ MonoBehaviour:
   firePoint: {fileID: 171281291}
   bulletPrefab: {fileID: 3819912041792809747, guid: 15456fcfb7266c24097c6ee8940113eb,
     type: 3}
+  gunBarrel: {fileID: 171281290}
   gunShot: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
 --- !u!114 &1225881083
 MonoBehaviour:
