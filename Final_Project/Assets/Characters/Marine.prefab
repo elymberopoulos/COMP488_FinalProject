@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 8875884951737021928}
   - component: {fileID: 8875884951737021969}
   m_Layer: 8
-  m_Name: Player
+  m_Name: Marine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,6 +125,11 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 8875884951889471635}
   m_CrouchDisableCollider: {fileID: 8875884951737021969}
   OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnShootEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -279,6 +284,7 @@ MonoBehaviour:
   controller: {fileID: 8875884951737021971}
   animator: {fileID: 8875884951737021934}
   runSpeed: 71
+  jumpForce: 1200
 --- !u!114 &8875884951737021928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +301,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3819912041792809747, guid: 15456fcfb7266c24097c6ee8940113eb,
     type: 3}
   gunBarrel: {fileID: 8875884950614821784}
+  animator: {fileID: 8875884951737021934}
   gunShot: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
 --- !u!61 &8875884951737021969
 BoxCollider2D:

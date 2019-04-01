@@ -23,11 +23,13 @@ public class CharacterController2D : MonoBehaviour
 	[Space]
 
 	public UnityEvent OnLandEvent;
+    //public UnityEvent OnShootEvent;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
-	public BoolEvent OnCrouchEvent;
+    //public BoolEvent OnShootEvent;
+    public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
 	private void Awake()
@@ -39,6 +41,10 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+
+        //if (OnShootEvent == null)
+            //OnShootEvent = new BoolEvent();
+        
 	}
 
 	private void FixedUpdate()
