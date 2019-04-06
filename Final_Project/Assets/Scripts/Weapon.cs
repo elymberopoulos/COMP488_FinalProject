@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject gunBarrel;
-    public Animator animator;
+    //public Animator animator;
 
     //public AudioClip impact;
     public AudioClip gunShot;
@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
             AudioSource.PlayClipAtPoint(gunShot, new Vector2(gunBarrel.transform.position.x, gunBarrel.transform.position.y));
-            animator.SetBool("Firing", true);
+            //animator.SetBool("Firing", true);
             //animator.SetBool("Firing", false);
 
 

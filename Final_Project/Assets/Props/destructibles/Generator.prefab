@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 6718192291611034638}
   - component: {fileID: 524139267976871489}
   - component: {fileID: 524139267976871488}
+  - component: {fileID: 2016712274770253060}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -198,6 +199,8 @@ MonoBehaviour:
   health: 60
   destroyEffect: {fileID: 5401711857203052814, guid: af085fe230e584a4ea1078595e293020,
     type: 3}
+  forceGate: {fileID: 0}
+  animator: {fileID: 2016712274770253060}
 --- !u!61 &524139267976871489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -245,6 +248,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &2016712274770253060
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524139267976871493}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d16c4d336c7a034ab8a040c6a3db195, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &524139269093855953
 GameObject:
   m_ObjectHideFlags: 0
