@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Generator : MonoBehaviour
 {
     public int health = 60;
@@ -21,7 +22,6 @@ public class Generator : MonoBehaviour
 
     void Die()
     {
-        
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
         Destroy(forceGate);
