@@ -129,11 +129,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  OnShootEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -298,10 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8875884950614821785}
-  bulletPrefab: {fileID: 3819912041792809747, guid: 15456fcfb7266c24097c6ee8940113eb,
+  bulletPrefab: {fileID: 2726989019888661786, guid: 74dd36141e909f24085bf12ddf6f3405,
     type: 3}
   gunBarrel: {fileID: 8875884950614821784}
-  animator: {fileID: 8875884951737021934}
   gunShot: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
 --- !u!61 &8875884951737021969
 BoxCollider2D:
