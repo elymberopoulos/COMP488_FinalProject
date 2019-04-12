@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -40,13 +41,26 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Conllison Enter");
         grounded = true;
-            
+        if (collision.gameObject.tag == "KILLZONE")
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
+        }
+        /*if (collision.gameObject.tag == "MOVINGPLATFORM")
+        {
+            collision.collider.transform.SetParent(transform);
+        }*/
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("Collison Exit");
         grounded = false;
+        /*if (collision.gameObject.tag == "MOVINGPLATFORM")
+        {
+            collision.collider.transform.SetParent(null);
+        }*/
 
     }
     void FixedUpdate()
