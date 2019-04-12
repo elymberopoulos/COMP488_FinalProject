@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class Generator : MonoBehaviour
@@ -9,6 +10,14 @@ public class Generator : MonoBehaviour
 
     public GameObject destroyEffect;
     public GameObject forceGate;
+    public AudioClip[] destructionAudioClips;
+    private AudioClip explosion;
+    public AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -23,6 +32,10 @@ public class Generator : MonoBehaviour
     void Die()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        for(int i = 0; i < destructionAudioClips.Length; i++)
+        {
+            explosion = destructionAudioClips[i];
+        }
         Destroy(gameObject);
         Destroy(forceGate);
         Destroy(destroyEffect);
