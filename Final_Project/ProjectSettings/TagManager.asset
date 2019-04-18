@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - KILLZONE
   - MOVINGPLATFORM
+  - Flashlight
   layers:
   - Default
   - TransparentFX

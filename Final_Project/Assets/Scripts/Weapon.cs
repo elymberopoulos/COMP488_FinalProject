@@ -8,10 +8,9 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject gunBarrel;
-    //public Animator animator;
-
-    //public AudioClip impact;
     public AudioClip gunShot;
+
+    bool flashLightOn = false;
 
     // Update is called once per frame
     void Update()
@@ -22,9 +21,8 @@ public class Weapon : MonoBehaviour
             AudioSource.PlayClipAtPoint(gunShot, new Vector2(gunBarrel.transform.position.x, gunBarrel.transform.position.y));
             //animator.SetBool("Firing", true);
             //animator.SetBool("Firing", false);
-
-
         }
+
     }
 
     void Shoot()

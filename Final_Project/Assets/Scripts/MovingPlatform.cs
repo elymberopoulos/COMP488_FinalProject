@@ -25,7 +25,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.collider.transform.SetParent(transform);
+            collision.collider.transform.SetParent(platform.transform);
         }
     }
 
