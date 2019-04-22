@@ -9,6 +9,8 @@ TagManager:
   - KILLZONE
   - MOVINGPLATFORM
   - Flashlight
+  - YellowKey
+  - YellowForceDoor
   layers:
   - Default
   - TransparentFX
