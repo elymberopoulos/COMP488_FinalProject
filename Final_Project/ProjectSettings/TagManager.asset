@@ -11,6 +11,9 @@ TagManager:
   - Flashlight
   - YellowKey
   - YellowForceDoor
+  - WalkPlatform
+  - RedKey
+  - RedForceDoor
   layers:
   - Default
   - TransparentFX
