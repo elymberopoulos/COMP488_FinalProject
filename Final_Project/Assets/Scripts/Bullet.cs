@@ -16,11 +16,20 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitTarget)
     {
         Generator generator = hitTarget.GetComponent<Generator>();
+        Robot robot = hitTarget.GetComponent<Robot>();
         if(generator != null)
         {
             generator.TakeDamage(damage);
             Debug.Log(generator.health);
         }
+        
+
+        if(robot != null)
+        {
+            robot.TakeDamage(15);
+            Debug.Log(robot.health);
+        }
         Destroy(gameObject);
     }
+
 }
