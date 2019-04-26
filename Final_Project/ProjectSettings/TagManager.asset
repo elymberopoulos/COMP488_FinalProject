@@ -11,6 +11,9 @@ TagManager:
   - Flashlight
   - YellowKey
   - YellowForceDoor
+  - Hazard
+  - Enemy
+  - Decorators
   layers:
   - Default
   - TransparentFX

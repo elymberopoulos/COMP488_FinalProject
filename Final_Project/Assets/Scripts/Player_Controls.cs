@@ -9,12 +9,14 @@ public class Player_Controls : MonoBehaviour
     public float acceleration, maxSpeed, frictionFactor, turnSpeed, gasPetalPenalty, fireRate;
     public GameObject standardBullet;
     private GameObject currentShot;
-    private int framesSinceLastShot;
+    private int framesSinceLastShot, framesSinceDeath;
+    private bool dying;
     // Start is called before the first frame update
     void Start()
     {
         currentVelocity = Vector3.zero;
         framesSinceLastShot = 0;
+        framesSinceDeath = 0;
     }
 
     // Update is called once per frame
@@ -53,6 +55,16 @@ public class Player_Controls : MonoBehaviour
         }
         framesSinceLastShot++;
 
+        if (dying == true)
+        {
+            framesSinceDeath++;
+            if (framesSinceDeath >= 28)
+            {
+                Destroy(this.gameObject);
+                GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera_Behavior>().GameOver();
+            }
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -60,6 +72,17 @@ public class Player_Controls : MonoBehaviour
         if(col.gameObject.tag == "Finish")
         {
         SceneManager.LoadScene(1);
+        }
+
+        if(col.gameObject.tag == "Enemy" ||col.gameObject.tag == "Hazard" || col.gameObject.tag == "Bullet")
+        {
+            this.GetComponent<Animator>().SetTrigger("OnDestroy");
+            dying = true;
+            foreach(GameObject gO in GameObject.FindGameObjectsWithTag("Decorators"))
+            {
+                gO.SetActive(false);
+            }
+            this.GetComponent<AudioSource>().Play();
         }
     }
 }
