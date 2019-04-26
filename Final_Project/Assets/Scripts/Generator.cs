@@ -10,6 +10,7 @@ public class Generator : MonoBehaviour
 
     public GameObject destroyEffect;
     public GameObject forceGate;
+    public GameObject rewardedKey;
     public AudioClip[] destructionAudioClips;
     private AudioClip explosion;
     public AudioSource audioSource;
@@ -36,6 +37,7 @@ public class Generator : MonoBehaviour
         {
             explosion = destructionAudioClips[i];
         }
+        Instantiate(rewardedKey, transform.position, Quaternion.identity);
         Destroy(gameObject);
         Destroy(forceGate);
         Destroy(destroyEffect);
