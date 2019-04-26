@@ -8,7 +8,7 @@ public class Dummy_AI : MonoBehaviour
     public float turnRate, speed, fireRate;
     private int framesSinceDeath;
     private bool dying;
-    private AudioSource audioSlave;
+    public AudioSource audioSlave;
     public GameObject standardBullet;
     private GameObject currentShot;
     private int framesSinceLastShot;
@@ -18,7 +18,7 @@ public class Dummy_AI : MonoBehaviour
     {
         framesSinceLastShot = 0;
         framesSinceDeath = 0;
-        audioSlave = GameObject.Find("AudioSlaveHolster").GetComponent<AudioSource>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

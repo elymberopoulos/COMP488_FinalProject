@@ -361,7 +361,7 @@ MonoBehaviour:
   frictionFactor: 1.77
   turnSpeed: 73.02
   gasPetalPenalty: 29.1
-  fireRate: 2.5
+  fireRate: 5
   standardBullet: {fileID: 148180082157209310, guid: 1a0fb3c6120253f4abf6cd54143ae676,
     type: 3}
 --- !u!50 &2813253423517045155
