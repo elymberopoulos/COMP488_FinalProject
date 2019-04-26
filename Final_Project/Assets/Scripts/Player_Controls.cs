@@ -84,5 +84,10 @@ public class Player_Controls : MonoBehaviour
             }
             this.GetComponent<AudioSource>().Play();
         }
+
+        if(col.gameObject.tag == "Finish")
+        {
+            SceneManager.LoadScene(sceneName: "SpaceLevel_2(dark)");
+        }
     }
 }
