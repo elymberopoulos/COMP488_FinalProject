@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 145970694143805550}
   - component: {fileID: 70956021736608062}
   - component: {fileID: 146442080789140664}
-  - component: {fileID: 3743532387991489366}
+  - component: {fileID: 585229209483115402}
+  - component: {fileID: 1114734478942672766}
   m_Layer: 0
   m_Name: Standard_Bullet
   m_TagString: Bullet
@@ -95,8 +96,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpeed: 20
   velocity: {x: 0, y: 0, z: 0}
---- !u!70 &3743532387991489366
-CapsuleCollider2D:
+--- !u!50 &585229209483115402
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148180082157209310}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &1114734478942672766
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,6 +130,21 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0011642464, y: 0.010093108}
-  m_Size: {x: 0.07, y: 0.105683655}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5166321, y: 0.2671795}
+    oldSize: {x: 0.07, y: 0.16}
+    newSize: {x: 0.07, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.036164246, y: 0.05539748}
+      - {x: -0.035445023, y: -0.021171808}
+      - {x: -0.0007425132, y: -0.044906408}
+      - {x: 0.033835754, y: -0.021891028}
+      - {x: 0.024485786, y: 0.050501317}
+      - {x: -0.00061806804, y: 0.12084746}

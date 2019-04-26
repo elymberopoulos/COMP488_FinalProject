@@ -14,6 +14,7 @@ public class Player_Controls : MonoBehaviour
     void Start()
     {
         currentVelocity = Vector3.zero;
+        framesSinceLastShot = 0;
     }
 
     // Update is called once per frame
@@ -46,6 +47,7 @@ public class Player_Controls : MonoBehaviour
             {
                 currentShot = GameObject.Instantiate(standardBullet, this.transform.position - (this.transform.up * 0.3f), this.transform.rotation);
                 currentShot.GetComponent<Projectile_Behavior>().velocity = currentVelocity + (-currentShot.transform.up * currentShot.GetComponent<Projectile_Behavior>().shotSpeed);
+                this.GetComponent<AudioSource>().Play();
                 framesSinceLastShot = 0;
             }
         }
