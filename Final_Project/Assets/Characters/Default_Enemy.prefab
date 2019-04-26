@@ -94,13 +94,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5885310099892842683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b2059a820491564ba489b1300b98f15, type: 3}
+  m_Script: {fileID: 11500000, guid: b309f10ab03ab8c48a5081d628c18bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  turnRate: 5.84
-  speed: 1.5
-  fireRate: 0.5
+  turnRate: 2
+  speed: 1.25
+  fireRate: 0.25
   audioSlave: {fileID: 5885310100486567027}
   standardBullet: {fileID: 148180082157209310, guid: 1a0fb3c6120253f4abf6cd54143ae676,
     type: 3}

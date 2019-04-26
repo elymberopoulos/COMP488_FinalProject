@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
+
 public class Dummy_AI : MonoBehaviour
 {
  public GameObject player;
@@ -57,5 +57,3 @@ public class Dummy_AI : MonoBehaviour
 
 
 }
-
-*/
