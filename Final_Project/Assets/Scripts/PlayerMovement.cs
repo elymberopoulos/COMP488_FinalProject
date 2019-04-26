@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public GameObject flashLight;
     public AudioClip KeyPickupSound;
+    public AudioClip DoorOpenSound;
+    public AudioClip DoorLockedSound;
+
 
     float horizontonalMove = 0f;
     public float runSpeed = 40f;
@@ -19,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     bool grounded = false;
     bool flashLightOn = false;
     bool hasYellowKey = false;
+    bool hasRedKey = false;
+
 
     void Update()
     {
@@ -60,8 +65,35 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "YellowForceDoor" & hasYellowKey)
         {
             GameObject ForceDoor = GameObject.FindWithTag("YellowForceDoor");
-            AudioSource.PlayClipAtPoint(KeyPickupSound, new Vector2(ForceDoor.transform.position.x, ForceDoor.transform.position.y));
+            AudioSource.PlayClipAtPoint(DoorOpenSound, new Vector2(ForceDoor.transform.position.x, ForceDoor.transform.position.y));
             Destroy(ForceDoor);
+        }
+        if (collision.gameObject.tag == "YellowForceDoor" & !hasYellowKey)
+        {
+            GameObject ForceDoor = GameObject.FindWithTag("YellowForceDoor");
+            AudioSource.PlayClipAtPoint(DoorLockedSound, new Vector2(ForceDoor.transform.position.x, ForceDoor.transform.position.y));
+ 
+        }
+
+        if (collision.gameObject.tag == "RedKey")
+        {
+            GameObject key = GameObject.FindWithTag("RedKey");
+            AudioSource.PlayClipAtPoint(KeyPickupSound, new Vector2(key.transform.position.x, key.transform.position.y));
+            Destroy(key);
+            hasRedKey = true;
+        }
+
+        if (collision.gameObject.tag == "RedForceDoor" & hasRedKey)
+        {
+            GameObject ForceDoor = GameObject.FindWithTag("RedForceDoor");
+            AudioSource.PlayClipAtPoint(DoorOpenSound, new Vector2(ForceDoor.transform.position.x, ForceDoor.transform.position.y));
+            Destroy(ForceDoor);
+
+        }
+        if (collision.gameObject.tag == "RedForceDoor" & !hasRedKey)
+        {
+            GameObject ForceDoor = GameObject.FindWithTag("RedForceDoor");
+            AudioSource.PlayClipAtPoint(DoorLockedSound, new Vector2(ForceDoor.transform.position.x, ForceDoor.transform.position.y));
 
         }
     }
