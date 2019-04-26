@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dummy_AI : MonoBehaviour
+public class Dummy_AI2 : MonoBehaviour
 {
     public GameObject player;
     public float turnRate, baseSpeed;
+    public int speed = 3;
     // Start is called before the first frame update
     void Start()
     {
