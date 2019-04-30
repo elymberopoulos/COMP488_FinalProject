@@ -14,6 +14,13 @@ TagManager:
   - Hazard
   - Enemy
   - Decorators
+  - RobotKillZone
+  - WalkPlatform
+  - RedForceDoor
+  - RedKey
+  - Wall
+  - Cyborg
+  - PatrolLimit
   layers:
   - Default
   - TransparentFX

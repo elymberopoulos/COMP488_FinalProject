@@ -11,9 +11,13 @@ public class Generator : MonoBehaviour
     public GameObject destroyEffect;
     public GameObject forceGate;
     public GameObject reward;
-    public AudioClip[] destructionAudioClips;
     private AudioClip explosion;
     public AudioSource audioSource;
+
+    public GameObject EnemyTypeToSpawn;
+    public GameObject SpawnLocation1;
+    public GameObject SpawnLocation2;
+    public GameObject SpawnLocation3;
 
     void Start()
     {
@@ -33,15 +37,14 @@ public class Generator : MonoBehaviour
     void Die()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        for(int i = 0; i < destructionAudioClips.Length; i++)
-        {
-            explosion = destructionAudioClips[i];
-        }
+        Instantiate(EnemyTypeToSpawn, SpawnLocation1.transform.position, Quaternion.identity);
+        Instantiate(EnemyTypeToSpawn, SpawnLocation2.transform.position, Quaternion.identity);
+        Instantiate(EnemyTypeToSpawn, SpawnLocation3.transform.position, Quaternion.identity);
+
         Destroy(gameObject);
         Destroy(forceGate);
         Destroy(destroyEffect);
         Instantiate(reward, transform.position, Quaternion.identity);
-
     }
 
     void Update()
