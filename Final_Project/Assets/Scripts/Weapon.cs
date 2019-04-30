@@ -19,8 +19,6 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
             AudioSource.PlayClipAtPoint(gunShot, new Vector2(gunBarrel.transform.position.x, gunBarrel.transform.position.y));
-            //animator.SetBool("Firing", true);
-            //animator.SetBool("Firing", false);
         }
 
     }

@@ -278,6 +278,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8875884951737021971}
   animator: {fileID: 8875884951737021934}
+  flashLight: {fileID: 0}
+  KeyPickupSound: {fileID: 8300000, guid: 35fbad8cdde724f11ba6481f1e64af71, type: 3}
+  DoorOpenSound: {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
+  DoorLockedSound: {fileID: 8300000, guid: df729d213c4be44a9b55cd109f5cd4f9, type: 3}
   runSpeed: 71
   jumpForce: 1200
 --- !u!114 &8875884951737021928

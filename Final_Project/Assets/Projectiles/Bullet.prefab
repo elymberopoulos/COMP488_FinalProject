@@ -119,6 +119,9 @@ MonoBehaviour:
   speed: 114.67
   damage: 20
   rb: {fileID: 4646639100123835890}
+  boom1: {fileID: 8300000, guid: 3f5c01dd1e7789f45bff62bb48e39b4b, type: 3}
+  boom2: {fileID: 8300000, guid: 68b1cd0f24df06d4d93e30fb6f956d82, type: 3}
+  boom3: {fileID: 8300000, guid: 05e969172b1426843a2bed02c899529d, type: 3}
 --- !u!61 &1346549067139982692
 BoxCollider2D:
   m_ObjectHideFlags: 0
